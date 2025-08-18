@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from '../components/header';
 
-// Import your loading gif
+
 import loadingGif from '../assets/images/loading.gif';
-import Roadmap from "../components/roadmap ";
+import Roadmap from "../components/roadmap.jsx";
 import TraitSwap from "../components/traitswap";
 import Social from "../components/social";
 import ArtGallery from "../components/artgallery";
