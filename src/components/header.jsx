@@ -22,8 +22,9 @@ function Header() {
   const navLinks = [
     { name: "Whitepaper", href: "#", action: () => window.open("https://your-whitepaper-link.com", "_blank") },
     { name: "Roadmap", href: "#roadmap", action: (e) => handleNavClick(e, "roadmap") },
-    { name: "Traitswap", href: "#traitswap", action: (e) => handleNavClick(e, "traitswap") },
-    { name: "Staking", href: "#socials", action: (e) => handleNavClick(e, "socials") },
+    { name: "Traitswap", href: "https://www.traitstore.app/pandarianz"},
+    { name: "Staking", href: "https://www.nftstake.app/pandarianz"},
+    { name: "$CANE", href: "https://dexscreener.com/solana/2wtwm92tchtd4pnc665hrrnnmkjkkgqnnytyyxej8pev"},
     { name: "Socials", href: "#socials", action: (e) => handleNavClick(e, "socials") },
   ];
 
@@ -35,21 +36,21 @@ function Header() {
           <img
             src={img1}
             alt="NFT 1"
-            className="w-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative transform -translate-x-1 scale-x-[-1]"
+            className="w-40 sm:w-60 md:w-64 lg:w-72 h-56 object-cover relative transform -translate-x-1 scale-x-[-1]"
           />
         </Slide>
         <Slide direction="up" triggerOnce delay={200} duration={1500} className="z-20">
           <img
             src={img2}
             alt="NFT 2"
-            className="ww-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative z-20"
+            className="ww-40 sm:w-60 md:w-64 lg:w-72 h-56 object-cover relative z-20"
           />
         </Slide>
         <Slide direction="up" triggerOnce delay={200} duration={3000} className="z-10 -ml-25">
           <img
             src={img3}
             alt="NFT 3"
-            className="w-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative transform translate-x-2"
+            className="w-40 sm:w-60 md:w-64 lg:w-72 h-56 object-cover relative transform translate-x-1"
           />
         </Slide>
       </div>
@@ -72,8 +73,9 @@ function Header() {
               <a
                 key={idx}
                 href={link.href}
-                className="rounded-full px-6 py-2 text-lg boton-elegante min-w-40 text-center"
+                className="rounded-full px-6 py-2 text-lg boton-elegante min-w-32 text-center"
                 onClick={link.action}
+                target="_blank"
               >
                 {link.name}
               </a>
@@ -81,7 +83,7 @@ function Header() {
           </nav>
         </div>
 
-        {/* Mobile Fullscreen Overlay */}
+
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -91,7 +93,7 @@ function Header() {
               transition={{ duration: 0.3 }}
               className="fixed inset-0 bg-[#1C1C2A] text-white flex flex-col justify-center items-center z-50 text-center"
             >
-              {/* Close button top-right */}
+
               <button
                 className="absolute top-6 right-6 p-2 rounded-lg border border-gray-500"
                 onClick={() => setIsOpen(false)}
@@ -99,7 +101,7 @@ function Header() {
                 <X size={28} />
               </button>
 
-              {/* Nav links */}
+
               <motion.nav
                 initial={{ y: 40, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -112,6 +114,7 @@ function Header() {
                     href={link.href}
                     onClick={link.action}
                     className="hover:text-gray-300 transition"
+                    target="_blank"
                   >
                     {link.name}
                   </a>

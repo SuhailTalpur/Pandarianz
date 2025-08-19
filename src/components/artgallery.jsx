@@ -10,6 +10,8 @@ import img9 from "../assets/images/artgallery9.jpeg";
 import img10 from "../assets/images/artgallery10.jpeg";
 
 function ArtGallery() {
+    const images = [img1, img2, img3, img4, img6, img7, img8, img9, img10];
+
     return (
         <section className="w-full min-h-screen bg-[#1C1C2A] text-white p-4 flex flex-col items-center justify-center">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 px-8 text-center">
@@ -17,31 +19,33 @@ function ArtGallery() {
                     Art Gallery
                 </h1>
             </div>
-            <div className="w-full overflow-x-hidden py-8 flex justify-center">
-                <div className="relative w-full flex justify-center">
-                    <div
-                        className="flex gap-8 animate-slide-gallery justify-center items-center"
-                        style={{
-                            width: "max-content",
-                            animation: "slideGallery 18s linear infinite"
-                        }}
-                    >
-                        {[img1, img2, img3, img4, img6, img7, img8, img9, img10, img1, img2, img3, img4, img6, img7, img8, img9, img10].map((img, idx) => (
-                            <div
-                                key={idx}
-                                className="bg-white/70 rounded-2xl shadow-xl shadow-blue-500/50 flex items-center justify-center"
-                                style={{ minWidth: "200px", minHeight: "200px" }}
-                            >
-                                <img
-                                    src={img}
-                                    alt={`Art ${idx % 9 + 1}`}
-                                    className="w-48 h-48 sm:w-60 sm:h-60 object-cover rounded-2xl"
-                                />
-                            </div>
-                        ))}
-                    </div>
+
+            {/* Slider */}
+            <div className="w-full overflow-hidden py-8">
+                <div
+                    className="flex gap-8 animate-slide-gallery"
+                    style={{
+                        width: "max-content",
+                        animation: "slideGallery 30s linear infinite"
+                    }}
+                >
+                    {/* Duplicate once for seamless loop */}
+                    {[...images, ...images].map((img, idx) => (
+                        <div
+                            key={idx}
+                            className="bg-white/70 rounded-2xl shadow-xl shadow-blue-500/50 flex items-center justify-center"
+                            style={{ minWidth: "200px", minHeight: "200px" }}
+                        >
+                            <img
+                                src={img}
+                                alt={`Art ${idx % images.length + 1}`}
+                                className="w-48 h-48 sm:w-60 sm:h-60 object-cover rounded-2xl"
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
+
             <style>
                 {`
                 @keyframes slideGallery {
