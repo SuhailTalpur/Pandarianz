@@ -22,7 +22,7 @@ function Home() {
     return (
       <div
         style={{
-          background: "#f9f9f9",
+          background: "#fbfcf7",
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
