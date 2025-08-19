@@ -15,12 +15,12 @@ function ArtGallery() {
     return (
         <section className="w-full min-h-screen bg-[#1C1C2A] text-white p-4 flex flex-col items-center justify-center">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 px-8 text-center">
-                <h1 className="text-4xl md:text-6xl font-bold p-2 md:p-4">
+                <h1 className="text-5xl md:text-6xl font-bold p-2 md:p-4">
                     Art Gallery
                 </h1>
             </div>
 
-            {/* Slider */}
+
             <div className="w-full overflow-hidden py-8">
                 <div
                     className="flex gap-8 animate-slide-gallery"
@@ -29,7 +29,6 @@ function ArtGallery() {
                         animation: "slideGallery 30s linear infinite"
                     }}
                 >
-                    {/* Duplicate once for seamless loop */}
                     {[...images, ...images].map((img, idx) => (
                         <div
                             key={idx}
@@ -39,7 +38,7 @@ function ArtGallery() {
                             <img
                                 src={img}
                                 alt={`Art ${idx % images.length + 1}`}
-                                className="w-48 h-48 sm:w-60 sm:h-60 object-cover rounded-2xl"
+                                className="w-56 h-56 sm:w-60 sm:h-60 object-cover rounded-2xl"
                             />
                         </div>
                     ))}
