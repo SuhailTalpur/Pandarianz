@@ -16,7 +16,7 @@ function TraitSwap() {
                 <div>
                     <h1 className="text-2xl md:text-3xl font-bold mb-2">WHEN?</h1>
                     <p className="text-base md:text-lg text-gray-200">
-                        Traitswap will be available as we launch our genesis collection
+                        Traitswap is available now as we launch our genesis collection
                     </p>
                 </div>
                 <div>
