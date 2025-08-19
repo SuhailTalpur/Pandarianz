@@ -29,33 +29,33 @@ function Header() {
 
   return (
     <header className="bg-[#1C1C2A] w-full min-h-screen flex flex-col items-center justify-center px-4 relative">
-      {/* Images */}
+
       <div className="flex justify-center items-end relative">
         <Slide direction="up" triggerOnce delay={200} duration={3000} className="z-10 -mr-25">
           <img
             src={img1}
             alt="NFT 1"
-            className="w-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative transform scale-x-[-1]"
+            className="w-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative transform -translate-x-1 scale-x-[-1]"
           />
         </Slide>
         <Slide direction="up" triggerOnce delay={200} duration={1500} className="z-20">
           <img
             src={img2}
             alt="NFT 2"
-            className="w-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative"
+            className="ww-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative z-20"
           />
         </Slide>
         <Slide direction="up" triggerOnce delay={200} duration={3000} className="z-10 -ml-25">
           <img
             src={img3}
             alt="NFT 3"
-            className="w-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative "
+            className="w-56 sm:w-60 md:w-64 lg:w-72 h-72 object-cover relative transform translate-x-2"
           />
         </Slide>
       </div>
 
       {/* White container */}
-      <div className="bg-white rounded-lg shadow-xl border-2 border-black p-6 md:p-10 max-w-5xl w-full relative z-40">
+      <div className="bg-white rounded-lg shadow-xl border-2 border-black p-6 md:p-10 max-w-5xl w-full relative z-40 min-h-[32vh] md:min-h-auto">
         {/* Navigation */}
         <div className="flex justify-center items-center mb-10 relative">
           {/* Mobile menu button */}
@@ -72,7 +72,7 @@ function Header() {
               <a
                 key={idx}
                 href={link.href}
-                className="rounded-full px-6 py-2 text-lg boton-elegante"
+                className="rounded-full px-6 py-2 text-lg boton-elegante min-w-40 text-center"
                 onClick={link.action}
               >
                 {link.name}
@@ -89,7 +89,7 @@ function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-[#1C1C2A] text-white flex flex-col justify-center items-center z-50"
+              className="fixed inset-0 bg-[#1C1C2A] text-white flex flex-col justify-center items-center z-50 text-center"
             >
               {/* Close button top-right */}
               <button
@@ -126,7 +126,7 @@ function Header() {
           <h1>
             <SplitText
               text="The Pandarianz"
-              className="text-5xl md:text-6xl lg:text-7xl font-extrabold"
+              className="text-5xl mt-8 sm:mt-8 md:mt-4 md:text-6xl lg:text-7xl font-extrabold"
               delay={350}
               duration={2}
               ease="power3.out"

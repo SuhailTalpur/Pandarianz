@@ -1,16 +1,17 @@
 import React from "react";
 import { MdDashboardCustomize } from "react-icons/md";
+import traitimg from "../assets/images/traitswap.jpeg";
 
 function TraitSwap() {
     return (
         <div className="w-full min-h-screen p-5 bg-[#1C1C2A] text-white flex flex-col lg:flex-row justify-center items-center gap-10">
-            <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-94 rounded-2xl p-[5px] bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">
-                <div className="flex flex-col items-center justify-center h-full rounded-2xl bg-[#1C1C2A] p-6 text-center">
-                    <MdDashboardCustomize className="text-7xl text-purple-600" />
-                    <h1 className="text-4xl font-bold mt-4">TraitSwap</h1>
-                </div>
+            <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 rounded-2xl p-[3px] bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">
+                <img
+                    src={traitimg}
+                    alt="Trait"
+                    className="w-full h-auto object-contain rounded-xl"
+                />
             </div>
-
             <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 space-y-6">
                 <div>
                     <h1 className="text-2xl md:text-3xl font-bold mb-2">WHEN?</h1>

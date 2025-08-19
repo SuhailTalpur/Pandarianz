@@ -1,7 +1,8 @@
 import React from "react";
 import logo1 from "../assets/images/MElogo.png";
-import logo2 from "../assets/images/img4.jpeg";
+import logo2 from "../assets/images/img-1.png";
 import logo3 from "../assets/images/xlogo.png";
+import { IoIosShirt } from "react-icons/io";
 
 const Social = () => {
   return (
@@ -15,11 +16,11 @@ const Social = () => {
             </div>
             <strong>Magic Eden</strong>
             <div className="card__body">Our NFT collection in a Marketplace.</div>
-            <span>Visit</span>
+            <span>Buy</span>
           </a>
           <a href="https://www.traitstore.app/pandarianz" className="card cursor-pointer shadow-xl/20" target="_blank">
             <div className="icon">
-              <img src={logo2} alt="" className="w-12 h-12" />
+              <IoIosShirt className="w-12 h-12" />
             </div>
             <strong>Traitstore</strong>
             <div className="card__body">Customize your NFT in Traitshop</div>
@@ -27,11 +28,11 @@ const Social = () => {
           </a>
           <a href="https://www.nftstake.app/pandarianz" className="card cursor-pointer shadow-xl/20" target="_blank">
             <div className="icon">
-              <img src={logo2} alt="" className="w-12 h-12" />
+              <img src={logo2} alt="" className="w-13 h-13" />
             </div>
             <strong>Stake NFT</strong>
             <div className="card__body">Staking for our NFT holders</div>
-            <span>Visit</span>
+            <span>Stake</span>
           </a>
           <a href="https://x.com/ThePandarianz" className="card cursor-pointer shadow-xl/20" target="_blank">
             <div className="icon">
@@ -39,7 +40,7 @@ const Social = () => {
             </div>
             <strong>Twitter</strong>
             <div className="card__body">Follow us for latest updates</div>
-            <span>Visit</span>
+            <span>Follow Us</span>
           </a>
         </div>
       </div>
