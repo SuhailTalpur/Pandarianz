@@ -36,7 +36,7 @@ function Header() {
           <img
             src={img1}
             alt="NFT 1"
-            className="w-40 sm:w-60 md:w-64 lg:w-72 h-56 object-cover relative transform -translate-x-1 scale-x-[-1]"
+            className="w-34 sm:w-44 md:w-52 lg:w-60 h-51 object-cover relative transform -translate-x-1 scale-x-[-1]"
           />
         </Slide>
         <Slide direction="up" triggerOnce delay={200} duration={1500} className="z-20">
@@ -50,7 +50,7 @@ function Header() {
           <img
             src={img3}
             alt="NFT 3"
-            className="w-40 sm:w-60 md:w-64 lg:w-72 h-56 object-cover relative transform translate-x-1"
+            className="w-34 sm:w-44 md:w-52 lg:w-60 h-51 object-cover relative transform translate-x-1"
           />
         </Slide>
       </div>
