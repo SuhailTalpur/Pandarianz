@@ -7,7 +7,14 @@ const Roadmap = () => {
             className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center py-10"
             style={{ backgroundImage: `url(${bgImg})` }}
         >
+            {/* Main light overlay */}
             <div className="absolute inset-0 bg-[#f9f7ed]/90"></div>
+
+            {/* Top fade into bg-[#1C1C2A] */}
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#1C1C2A] to-transparent pointer-events-none"></div>
+
+            {/* Bottom fade into bg-[#1C1C2A] */}
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1C1C2A] to-transparent pointer-events-none"></div>
 
             <div className="relative max-w-6xl mx-auto text-center px-6 md:px-12 w-full">
                 <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-gray-900 mb-4">
@@ -16,9 +23,11 @@ const Roadmap = () => {
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-20">
                     we don’t follow roadmaps, we follow visions.
                 </p>
+
                 <div className="relative w-full">
-                    <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 md:top-10 w-full md:w-[90%] h-1 bg-gray-300 z-0"
-                        style={{ top: '50%', height: '2px' }}
+                    <div
+                        className="absolute left-1/2 transform -translate-x-1/2 top-1/2 md:top-10 w-full md:w-[90%] h-1 bg-gray-300 z-0"
+                        style={{ top: "50%", height: "2px" }}
                     ></div>
                     <div className="relative grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 text-black font-semibold w-full z-10">
                         <div className="flex flex-col items-center">
